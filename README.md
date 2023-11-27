@@ -107,7 +107,3 @@ Inside of our ListView
 8. In your list view click event, create the code so that when the user clicks on a name in our list view, a message box appears showing their full name.
 
 ![Final Result](Images/Final_Result.gif)
-
-## How to setup
-
-1. 
