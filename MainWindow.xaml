@@ -1,12 +1,28 @@
-﻿<Window x:Class="GA_ListView.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:GA_ListView"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+﻿<Window
+    x:Class="GA_ListView.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:GA_ListView"
+    mc:Ignorable="d"
+    Title="MainWindow"
+    Height="450"
+    Width="800">
+    <Canvas>
+ <ListView x:Name="lvDisplayList"
+            Height="291"
+            Width="512"
+            Canvas.Left="144"
+            Canvas.Top="59"
+            SelectionChanged="lvDisplayList_SelectionChanged">
+    <ListView.View>
+        <GridView>
+            <GridViewColumn Header="ID" DisplayMemberBinding="{Binding IDNumber}" />
+            <GridViewColumn Header="First Name" DisplayMemberBinding="{Binding FirstName}" />
+            <GridViewColumn Header="Last Name" DisplayMemberBinding="{Binding LastName}" />
+        </GridView>
+    </ListView.View>
+</ListView>
+    </Canvas>
 </Window>
